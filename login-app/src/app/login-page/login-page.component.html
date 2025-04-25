@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login-page.component.css" />
+  </head>
+  <body>
+    <h1>Welcome to Login Page</h1>
+    <section>
+      <div class="login-form">
+        <label>Username:</label>
+        <input
+          type="text"
+          placeholder="Enter your username"
+          [(ngModel)]="username"
+        />
+
+        <label>Password:</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          [(ngModel)]="password"
+        />
+
+        <button (click)="onLogin()">Sign In</button>
+      </div>
+
+      <app-pop-up
+        *ngIf="popUpShow"
+        [username]="username"
+        [password]="password"
+        (close)="onLogout()"
+      ></app-pop-up>
+    </section>
+  </body>
+</html>
