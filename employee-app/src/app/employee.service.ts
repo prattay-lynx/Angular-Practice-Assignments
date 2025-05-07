@@ -36,6 +36,46 @@ export class EmployeeService {
       username: 'banerjee',
       password: '123',
     },
+    {
+      id: 5,
+      name: 'Avirup',
+      position:'System Engineer',
+      salary: 90000,
+      username: 'avirup',
+      password: '123',
+    },
+    {
+      id: 6,
+      name: 'Ram',
+      position:'System Engineer',
+      salary: 85000,
+      username: 'ram',
+      password: '123',
+    },
+      {
+      id: 7,
+      name: 'Amirul',
+      position:'System Engineer',
+      salary: 70000,
+      username: 'amirul',
+      password: '123',
+    },
+        {
+      id: 8,
+      name: 'Sam',
+      position:'Data Engineer',
+      salary: 65000,
+      username: 'sam',
+      password: '123',
+    },
+        {
+      id: 9,
+      name: 'projjal',
+      position:'Credit card Engineer',
+      salary: 87000,
+      username: 'projjal',
+      password: '123',
+    }
   ];
 
   private loggedInUser: Employee | null = null;
