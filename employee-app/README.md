@@ -38,7 +38,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Project is deployed live
 
-[Deployed](https://deluxe-fox-8dcc5d.netlify.app/)
+[Deployed](https://astounding-faun-962008.netlify.app/)
 
 ## Additional Resources
 
