@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather APP</h1>
+      <h2>Weather App Using Angular</h2>
+      <div class="content">
+        <input type="text" placeholder="Enter region" [(ngModel)]="region" />
+        <button type="submit" (click)="WeatherAPI()">Get Weather</button>
+
+        <div *ngIf="loading" class="loading">Loading...</div>
+        <div *ngIf="error" class="err_mss">{{ error }}</div>
+
+        <div *ngIf="weatherdata" id="info-weather">
+          <h3>{{ weatherdata.name }}</h3>
+          <p>{{ currentdate }}</p>
+          <img [src]="url" alt="icon-weather" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
