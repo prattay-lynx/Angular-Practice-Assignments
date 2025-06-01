@@ -9,10 +9,10 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  username = '';
-  password = '';
-  error = '';
-  empty = '';
+  username: any = 'Prattay'; //default name displayed
+  password: any = '';
+  error: any = '';
+  empty: any = '';
 
   constructor(
     private employeeService: EmployeeService,

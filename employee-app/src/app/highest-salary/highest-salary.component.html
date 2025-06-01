@@ -1,0 +1,15 @@
+<body>
+  <div class="container">
+    <h1>Highest paid Employee:</h1>
+    <div class="content" *ngIf="highpaidsal">
+      <strong>ID:</strong> {{ highpaidsal.id }}<br />
+      <strong>Name:</strong> {{ highpaidsal.name }}<br />
+      <strong>Position:</strong> {{ highpaidsal.position }}<br />
+      <strong>Salary:</strong> {{ highpaidsal.salary }}
+    </div>
+
+    <div *ngIf="!highpaidsal">Employee is not available</div>
+
+    <a routerLink="/dashboard" class="back-link">← Back to Dashboard</a>
+  </div>
+</body>

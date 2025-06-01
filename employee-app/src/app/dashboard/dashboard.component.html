@@ -2,14 +2,26 @@
   <div style="padding: 20px">
     <h2>Employee Dashboard</h2>
 
-    <div style="margin-bottom: 10px; border: 1px solid black; padding: 10px">
+    <!-- <div style="margin-bottom: 10px; border: 1px solid black; padding: 10px">
       <strong>Highest Paid Employee:</strong>
       {{ highestPaid?.name }} - ₹{{ highestPaid?.salary }}
+    </div> -->
+
+    <!--here template based parent child Relationship is used-->
+    <app-highest-salary [highpaidsal]="highestPaid"> </app-highest-salary>
+
+    <div *ngIf="loggedInEmployee" class="logged-in-info">
+      <h3>Details of the employee LoggedIn:</h3>
+      <div><strong>Name:</strong> {{ loggedInEmployee.name }}</div>
+      <div><strong>Salary:</strong> {{ loggedInEmployee.salary }}</div>
+      <div><strong>Role:</strong> {{ loggedInEmployee.position }}</div>
     </div>
 
-    <div *ngIf="loggedInEmployee">
-      <strong>Your Salary:</strong> ₹{{ loggedInEmployee.salary }}
-    </div>
+    <a routerLink="/highest-salary" class="highest-salary-link">
+      view highest paid employee →
+    </a>
+
+    <!--Table-->
 
     <p-table [value]="employees">
       <ng-template pTemplate="header">
